@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  resources :students, :only => [:show, :new, :create]
+  root 'students#index'
+  get 'students/index'
+
+  get 'students/show'
+
+  get 'students/new'
+
+  get 'students/create'
+
+  get 'students/edit'
+
+  get 'students/update'
+
+  get 'students/destroy'
+
+  get 'students/draw'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
