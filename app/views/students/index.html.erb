@@ -9,9 +9,12 @@
 <table class="table">
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
-      <th>Description</th>
-      <th>Stock</th>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>Color</th>
+      <th>GPA</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,11 +22,14 @@
   <tbody>
     <% @students.to_a.each do |student| %>
       <tr>
+        <td><%= student.id %></td>
         <td><%= student.name %></td>
-        <td><%= student.color %></td>
+        <td><%= student.weight %></td>
         <td><%= student.height %></td>
+        <td><%= student.color %></td>
+        <td><%= student.gpa %></td>
         <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', students_edit_path(student) %></td>
+        <td><%= link_to 'Edit', edit_student_path(student.id) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

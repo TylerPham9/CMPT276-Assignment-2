@@ -3,7 +3,12 @@
         <title>Students</title>
     </head>
     <body>
-        <p>Name: <%@students.name %> </p>
-        <p>height: <%@students.height %></p>
+        <p>Name: <%= @students.name %> </p>
+        <p>Weight: <%= @students.weight %></p>
+        <p>Height: <%= @students.height %></p>
+        <p>Color: <%= @students.color %></p>
+        <p>GPA: <%= @students.gpa %></p>
+        <%= link_to 'Edit', edit_student_path(@students.id) %> |
+        <%= link_to 'Back', students_path %>
     </body>
 </html>
