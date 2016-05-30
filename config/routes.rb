@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :students
   root 'students#index'
+  
   get 'students/index'
 
   get 'students/show'
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'students/destroy'
 
-  get 'students/draw'
+  get 'students/draw' => 'students#draw'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

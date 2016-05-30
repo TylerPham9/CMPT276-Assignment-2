@@ -1,11 +1,18 @@
 <div class="container">
 <h1>Listing students</h1>
-<p>
-  <% @s.each do |ss| %>
-  <%= ss %> <br />
+<!--<p>-->
+<!--  <% @s.each do |ss| %>-->
+<!--  <%= ss %> <br />-->
+<!--  <% end %>-->
+<!--</p>-->
+<style>
+  <% @students.to_a.each do |student| %>
+  #boxId_<%= student.id %> {
+    width:calc(<%= student.weight %>px*2);
+    height:calc(<%= student.height %>px*2);
+  }
   <% end %>
-</p>
-
+</style>
 <table class="table">
   <thead>
     <tr>
@@ -39,5 +46,12 @@
 <br>
 
 <%= link_to 'New students', new_student_path %>
+
+<% @students.to_a.each do |student| %>
+    <div id = "boxId_<%= student.id %>" class = "studentBoxes">
+        <p style ="color: <%= student.color %>"> <%= student.name %></p>
+        <p> <%= student.gpa %></p>
+    </div>
+<% end %>
 
 </div>
