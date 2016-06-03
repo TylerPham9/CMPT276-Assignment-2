@@ -1,6 +1,9 @@
 // Place all the styles related to the students controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-color:gray;
+}
 #drawContainer {
     position: relative;
     min-height: 150px;
@@ -34,5 +37,4 @@
     padding: 10px;
     height: 40px;
     text-align: center;
-    
 }

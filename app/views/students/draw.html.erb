@@ -8,16 +8,26 @@
 </style>
 
 <div id = "drawContainer">
-
+    <% byGroups = @students.group_by{|student| student.group} %>
+    <%= @students.class %>
    
-    <% @students.to_a.each do |student| %>
-        <div id = "boxId_<%= student.id %>" class = "studentBoxes">
-            <p style ="color: <%= student.color %>"> <%= student.name %></p>
-            <p> <%= student.gpa %></p>
-        </div>
-    <% end %>
     
+    <%= byGroups.class %>
+    
+    <%= @students.group(:group) %>
+    
+    <% byGroups.each do |groups| %>
+
+        <p> divider</p>
+    <% end %>
+
+    <div id = "group1">
+        <% @students.each do |student| %>
+            <div id = "boxId_<%= student.id %>" class = "studentBoxes">
+                <p style ="color: <%= student.color %>"> <%= student.name %></p>
+                <p> <%= student.gpa %></p>
+            </div>
+        <% end %>
+    </div>    
 
 </div>
-
-<%= link_to 'Back', students_path %>
