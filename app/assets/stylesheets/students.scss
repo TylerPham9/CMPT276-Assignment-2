@@ -1,15 +1,38 @@
 // Place all the styles related to the students controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#drawContainer {
+    position: relative;
+    min-height: 150px;
+    
+}
+
 .studentBoxes {
+    // position: absolute;
+    // bottom: 0;
     // background-color:black;
-    // display:block-inline;
-    float:left;
+    vertical-align: bottom;
+    display: inline-block;
+    // vertical-align: bottom;
+    // float:left;
     border: 1px solid black;
     text-align: center;
+    margin: 10px;
 }
 
 .studentBoxes p {
     margin: 0;
+    vertical-align: middle;
     // background-color: <%= @students.color %>;
+}
+.table {
+    // border: 1px solid black;
+    border-collapse: collapse;
+}
+.table td, th {
+    border: 1px solid black;
+    padding: 10px;
+    height: 40px;
+    text-align: center;
+    
 }

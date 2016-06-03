@@ -5,18 +5,10 @@
 <!--  <%= ss %> <br />-->
 <!--  <% end %>-->
 <!--</p>-->
-<style>
-  <% @students.to_a.each do |student| %>
-  #boxId_<%= student.id %> {
-    width:calc(<%= student.weight %>px*2);
-    height:calc(<%= student.height %>px*2);
-  }
-  <% end %>
-</style>
+
 <table class="table">
   <thead>
     <tr>
-      <th></th>
       <th>Name</th>
       <th>Weight</th>
       <th>Height</th>
@@ -29,7 +21,6 @@
   <tbody>
     <% @students.to_a.each do |student| %>
       <tr>
-        <td><%= student.id %></td>
         <td><%= student.name %></td>
         <td><%= student.weight %></td>
         <td><%= student.height %></td>
@@ -47,11 +38,6 @@
 
 <%= link_to 'New students', new_student_path %>
 
-<% @students.to_a.each do |student| %>
-    <div id = "boxId_<%= student.id %>" class = "studentBoxes">
-        <p style ="color: <%= student.color %>"> <%= student.name %></p>
-        <p> <%= student.gpa %></p>
-    </div>
-<% end %>
+<%= link_to 'Draw', '/draw' %>
 
 </div>

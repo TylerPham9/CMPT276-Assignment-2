@@ -1,2 +1,23 @@
-<h1>Students#destroy</h1>
-<p>Find me in app/views/students/destroy.html.erb</p>
+<style>
+  <% @students.to_a.each do |student| %>
+  #boxId_<%= student.id %> {
+    width:calc(<%= student.weight %>px*1.5);
+    height:calc(<%= student.height %>px*1.5);
+  }
+  <% end %>
+</style>
+
+<div id = "drawContainer">
+
+   
+    <% @students.to_a.each do |student| %>
+        <div id = "boxId_<%= student.id %>" class = "studentBoxes">
+            <p style ="color: <%= student.color %>"> <%= student.name %></p>
+            <p> <%= student.gpa %></p>
+        </div>
+    <% end %>
+    
+
+</div>
+
+<%= link_to 'Back', students_path %>
