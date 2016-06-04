@@ -10,5 +10,7 @@ class CreateStudents < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :students, :group
+    Student.reset_column_information
   end
 end
