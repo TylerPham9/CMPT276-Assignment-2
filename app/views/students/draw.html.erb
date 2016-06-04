@@ -3,8 +3,8 @@
 <% end %>
 
 
+<!--for each student, give them specific style-->
 <style>
-
   <% @students.to_a.each do |student| %>
   #boxId_<%= student.id %> {
     width:calc(<%= student.weight %>px*1.5);
@@ -30,6 +30,7 @@
   <div id = "group5" class = "groupContainers">
       <h1>Group 5</h1>
   </div>
+<!--for each student create a div with class and id-->
     <% @students.each do |student| %>
         <div id = "boxId_<%= student.id %>" class = "studentBoxes">
             <p style ="color: <%= student.color %>"> <%= student.name %></p>
