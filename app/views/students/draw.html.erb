@@ -1,4 +1,6 @@
-<%= javascript_include_tag( 'draw' ) %>
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "draw.js" %>
+<% end %>
 <style>
 
   <% @students.to_a.each do |student| %>
