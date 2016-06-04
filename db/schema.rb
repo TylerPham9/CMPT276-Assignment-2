@@ -19,9 +19,10 @@ ActiveRecord::Schema.define(version: 20160603003639) do
     t.integer  "height"
     t.string   "color"
     t.float    "gpa"
+    t.integer  "group"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "group"
+    
   end
 
 end
