@@ -1,12 +1,8 @@
 <div class="container">
-<h1>Listing students</h1>
-<!--<p>-->
-<!--  <% @s.each do |ss| %>-->
-<!--  <%= ss %> <br />-->
-<!--  <% end %>-->
-<!--</p>-->
+<h1>List of Students</h1>
 
-<table class="table">
+
+<table class="studentTable">
   <thead>
     <tr>
       <th>Name</th>
@@ -33,13 +29,14 @@
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <tr>
+      <td colspan="8"><%= link_to 'New students', new_student_path %></td>
+      <td><%= link_to 'Draw', '/draw' %></td>
+    </tr>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New students', new_student_path %>
 
-<%= link_to 'Draw', '/draw' %>
 
 </div>

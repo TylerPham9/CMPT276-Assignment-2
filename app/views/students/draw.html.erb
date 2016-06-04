@@ -9,24 +9,12 @@
   #boxId_<%= student.id %> {
     width:calc(<%= student.weight %>px*1.5);
     height:calc(<%= student.height %>px*1.5);
+    border: 2px solid <%= student.color %>;
   }
   <% end %>
 </style>
 
 <div id = "drawContainer">
-    <!--<% byGroups = @students.group_by{|student| student.group} %>-->
-    <!--<%= @students.class %>-->
-   
-    
-    <!--<%= byGroups.class %>-->
-    
-    <!--<%= @students.group(:group) %>-->
-    
-    <!--<% byGroups.each do |groups| %>-->
-
-    <!--    <p> divider</p>-->
-    <!--<% end %>-->
-
   <div id = "group1" class = "groupContainers">
       <h1>Group 1</h1>
   </div>
@@ -42,14 +30,17 @@
   <div id = "group5" class = "groupContainers">
       <h1>Group 5</h1>
   </div>
-        <% @students.each do |student| %>
-            <div id = "boxId_<%= student.id %>" class = "studentBoxes">
-                <p style ="color: <%= student.color %>"> <%= student.name %></p>
-                <p> <%= student.gpa %></p>
-            </div>
-            <script>
-                sortGroups(<%= student.id %>, <%= student.group %>);
-            </script>
-        <% end %>
+    <% @students.each do |student| %>
+        <div id = "boxId_<%= student.id %>" class = "studentBoxes">
+            <p style ="color: <%= student.color %>"> <%= student.name %></p>
+            <p> <%= student.gpa %></p>
+        </div>
+        <script>
+            sortGroups(<%= student.id %>, <%= student.group %>);
+        </script>
+    <% end %>
+</div>
 
+<div id="backButton">
+    <%= link_to 'Back', students_path %>
 </div>

@@ -2,48 +2,68 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-    background-color:gray;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #CCCCCC;
+    padding: 10px
 }
 #drawContainer {
     position: relative;
     min-height: 150px;
     
 }
+a,a:visited {
+     color: blue;
+     text-decoration: none;
+}
+
 
 .studentBoxes {
     // position: absolute;
     // bottom: 0;
-    // background-color:black;
+    background-color: #CCCCCC;
     vertical-align: bottom;
     display: inline-block;
-    // vertical-align: bottom;
-    // float:left;
-    border: 1px solid black;
     text-align: center;
     margin: 10px;
 }
 
 .studentBoxes p {
     margin: 0;
+    
+    // left: 50%;
     vertical-align: middle;
     // background-color: <%= @students.color %>;
 }
-.table {
+.studentTable {
     // border: 1px solid black;
     border-collapse: collapse;
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 10px #888888;
+
 }
-.table td, th {
+.studentTable td, th {
     border: 1px solid black;
     padding: 10px;
     height: 40px;
     text-align: center;
 }
 .groupContainers {
-    width: 80%;
-    background-color: #999999;
-    border: 1px solid green; 
+    width: 65%;
+    background-color: #EEEEEE;
+    border: 2px solid #AAAAAA; 
     min-height: 50px;
-    margin: 10px;
+    margin-bottom: 20px;
     padding: 10px;
-    
+    box-shadow: 10px 10px 10px #888888;
+}
+.groupContainers h1 {
+    margin-left: 10px;
+}
+#backButton {
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 10px #888888;
+    border: 2px solid #AAAAAA; 
+    padding: 10px;
+    width: 100px;
+    text-align:center;
 }

@@ -3,13 +3,32 @@
         <title>Students</title>
     </head>
     <body>
-        <p>Name: <%= @students.name %> </p>
-        <p>Weight: <%= @students.weight %></p>
-        <p>Height: <%= @students.height %></p>
-        <p>Color: <%= @students.color %></p>
-        <p>GPA: <%= @students.gpa %></p>
-        <p>Group: <%= @students.group %></p>
-        <%= link_to 'Edit', edit_student_path(@students.id) %> |
-        <%= link_to 'Back', students_path %>
+        <table class ="studentTable">
+            <tr>
+                <td>Name:</td>
+                <td><%= @students.name %></td>
+            </tr>
+            <tr>
+                <td>Weight:</td>
+                <td><%= @students.weight %></td>
+            </tr>
+            <tr>
+                <td>Color:</td>
+                <td><%= @students.color %></td>
+            </tr>
+            <tr>
+                <td>GPA:</td>
+                <td><%= @students.gpa %></td>
+            </tr>
+            <tr>
+                <td>Group:</td>
+                <td><%= @students.group %></td>
+            </tr>
+            <tr>
+                <td><%= link_to 'Edit', edit_student_path(@students.id) %> </td>
+                <td><%= link_to 'Back', students_path %></td>
+            </tr>
+
+        </table>
     </body>
 </html>

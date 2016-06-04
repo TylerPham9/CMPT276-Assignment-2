@@ -10,32 +10,38 @@
       </ul>
     </div>
   <% end %>
+  <table class="studentTable">
+    <tr>
+      <td><%= f.label :name %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :weight %></td>
+      <td><%= f.text_field :weight %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :height %></td>
+      <td><%= f.text_field :height %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :color %></td>
+      <td><%= f.text_field :color %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :gpa %></td>
+      <td><%= f.number_field :gpa, :step => 'any' %></td>
+    </tr>    
+    <tr>
+      <td><%= f.label :group %></td>
+      <td><%= f.number_field :group, min: 1, max: 5 %></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit %></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= link_to 'Back', students_path %></td>
+    </tr>
+  </table>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.number_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :height %><br>
-    <%= f.number_field :height %>
-  </div>
-  <div class="field">
-    <%= f.label :color %><br>
-    <%= f.text_field :color %>
-  <div>
-    <%= f.label :gpa %><br>
-    <%= f.number_field :gpa, :step => 'any' %>
-  </div>
-  
-  <div>
-    <%= f.label :group %><br>
-    <%= f.number_field :group, min: 1, max: 5 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
 <% end %>
