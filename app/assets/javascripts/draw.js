@@ -7,9 +7,7 @@ function sortGroups(studentId, groupNum) {
 
 
 $(document).ready(function() {
-    console.log('foo');
     $('.groupContainers').click(function() {
             $(this).children('.studentBoxes').toggle('slow');
-            
     });
 });
